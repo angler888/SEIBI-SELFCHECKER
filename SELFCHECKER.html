@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>健康セルフチェッカー</title>
+<style>
+body { font-family: "Hiragino Sans","Noto Sans JP",sans-serif; padding: 20px; line-height: 1.8; }
+section { margin-bottom: 30px; padding: 15px; border: 1px solid #ccc; border-radius: 8px; }
+h2 { margin-bottom: 10px; }
+button { padding: 10px 20px; font-size: 18px; margin-top: 20px; }
+.result { margin-top: 30px; padding: 20px; background: #f7f7f7; border-radius: 10px; white-space: pre-wrap; }
+</style>
+</head>
+
+<body>
+<h1>学生のための健康セルフチェッカー</h1>
+<p>
+みなさん、日々の学校生活おつかれさまです。勉強や部活動、進路や人間関係などの悩みで少し疲れていませんか？  
+自分の心身の状態を客観視することはとても大切です。
+</p>
+
+<form id="form">
+
+<!-- 生活 -->
+<section>
+<h2>生活について</h2>
+
+<p>① 気軽に話したり、悩みを相談できる相手がいますか？</p>
+<label><input type="radio" name="life1" value="good"> はい</label>
+<label><input type="radio" name="life1" value="middle"> どちらともいえない</label>
+<label><input type="radio" name="life1" value="bad"> いいえ</label>
+
+<p>② 規則的な生活（睡眠・食事・運動）ができていますか？</p>
+<label><input type="radio" name="life2" value="good"> はい</label>
+<label><input type="radio" name="life2" value="middle"> どちらともいえない</label>
+<label><input type="radio" name="life2" value="bad"> いいえ</label>
+
+<p>③ スマートフォンを使いすぎていませんか？</p>
+<label><input type="radio" name="life3" value="good"> はい（使いすぎていない）</label>
+<label><input type="radio" name="life3" value="middle"> どちらともいえない</label>
+<label><input type="radio" name="life3" value="bad"> いいえ（使いすぎている）</label>
+
+<p>④ 自分の容姿について過度に悩むことはありませんか？</p>
+<label><input type="radio" name="life4" value="good"> はい（あまり悩まない）</label>
+<label><input type="radio" name="life4" value="middle"> ときどきある</label>
+<label><input type="radio" name="life4" value="bad"> ある（よく悩む）</label>
+
+</section>
+
+<!-- 進路 -->
+<section>
+<h2>進路について</h2>
+
+<p>① 将来の目標を少しでも意識していますか？</p>
+<label><input type="radio" name="path1" value="good"> はい</label>
+<label><input type="radio" name="path1" value="middle"> どちらともいえない</label>
+<label><input type="radio" name="path1" value="bad"> いいえ</label>
+
+<p>② 必要な情報を集めようとしていますか？</p>
+<label><input type="radio" name="path2" value="good"> はい</label>
+<label><input type="radio" name="path2" value="middle"> どちらともいえない</label>
+<label><input type="radio" name="path2" value="bad"> いいえ</label>
+
+<p>③ 自分の長所や強みを把握できていますか？</p>
+<label><input type="radio" name="path3" value="good"> はい</label>
+<label><input type="radio" name="path3" value="middle"> どちらともいえない</label>
+<label><input type="radio" name="path3" value="bad"> いいえ</label>
+
+<p>④ 進路について相談できる相手がいますか？</p>
+<label><input type="radio" name="path4" value="good"> はい</label>
+<label><input type="radio" name="path4" value="middle"> どちらともいえない</label>
+<label><input type="radio" name="path4" value="bad"> いいえ</label>
+
+</section>
+
+<!-- 学習 -->
+<section>
+<h2>学習について</h2>
+
+<p>① 毎日ある程度の学習時間を確保できていますか？</p>
+<label><input type="radio" name="study1" value="good"> はい</label>
+<label><input type="radio" name="study1" value="middle"> どちらともいえない</label>
+<label><input type="radio" name="study1" value="bad"> いいえ</label>
+
+<p>② わからないことを調べたり、人に聞いていますか？</p>
+<label><input type="radio" name="study2" value="good"> はい</label>
+<label><input type="radio" name="study2" value="middle"> どちらともいえない</label>
+<label><input type="radio" name="study2" value="bad"> いいえ</label>
+
+<p>③ 集中できる環境を整えていますか？</p>
+<label><input type="radio" name="study3" value="good"> はい</label>
+<label><input type="radio" name="study3" value="middle"> どちらともいえない</label>
+<label><input type="radio" name="study3" value="bad"> いいえ</label>
+
+<p>④ 考査や模試で目標点を設定していますか？</p>
+<label><input type="radio" name="study4" value="good"> はい</label>
+<label><input type="radio" name="study4" value="middle"> どちらともいえない</label>
+<label><input type="radio" name="study4" value="bad"> いいえ</label>
+
+</section>
+
+<!-- 人間関係 -->
+<section>
+<h2>人間関係について</h2>
+
+<p>① 気軽に話したり相談できる相手がいますか？</p>
+<label><input type="radio" name="rel1" value="good"> はい</label>
+<label><input type="radio" name="rel1" value="middle"> どちらともいえない</label>
+<label><input type="radio" name="rel1" value="bad"> いいえ</label>
+
+<p>② 周りの目を気にしすぎず、自分らしくふるまえていますか？</p>
+<label><input type="radio" name="rel2" value="good"> はい</label>
+<label><input type="radio" name="rel2" value="middle"> どちらともいえない</label>
+<label><input type="radio" name="rel2" value="bad"> いいえ</label>
+
+<p>③ 困ったときに誰かに気持ちを話せていますか？</p>
+<label><input type="radio" name="rel3" value="good"> はい</label>
+<label><input type="radio" name="rel3" value="middle"> どちらともいえない</label>
+<label><input type="radio" name="rel3" value="bad"> いいえ</label>
+
+<p>④ 相手との距離感を調整できていますか？</p>
+<label><input type="radio" name="rel4" value="good"> はい</label>
+<label><input type="radio" name="rel4" value="middle"> どちらともいえない</label>
+<label><input type="radio" name="rel4" value="bad"> いいえ</label>
+
+</section>
+
+<button type="button" onclick="check()">結果を見る</button>
+</form>
+
+<div id="result" class="result"></div>
+
+<script>
+const feedback = {
+
+life: {
+good: [
+"生活のリズムが整っていて、とても良いことです。",
+"食事・睡眠・運動のバランスが取れている点は大変良いことです。",
+"SNSに振り回されず自分らしさを保てているのはとても良いことです。",
+"気分の波を把握して自分を大切にできています。この調子です。",
+"できたことに注目し自分を褒められているのは素晴らしい習慣です。"
+],
+middle: [
+"寝る時間と起きる時間を5分ずつ整えるだけでも安定します。",
+"SNSを見る時間を21時以降はオフにするなど区切ると楽になります。",
+"外見が気になる日は良いところを1つだけ書き出す習慣が役立ちます。",
+"体調が安定しない日は食事・睡眠の記録を1日だけつけてみましょう。",
+"気分が落ちた日は「寝る・食べる・あたたかい風呂」を優先してください。"
+],
+bad: [
+"まずは「寝る・食べる」の2つだけ意識しましょう。生活はそこから良くなります。",
+"外見の悩みで苦しい時はSNSを一時的に離れると心が軽くなります。",
+"つらいときは予定をへらし休む日を作ってください。休むことは必要な行動です。",
+"誰かに弱音を少し話すだけでも気持ちが軽くなります。",
+"自分を責めないでください。生活が崩れるのはがんばりすぎのサインです。"
+]
+},
+
+path: {
+good: [
+"目標を意識して行動できているのはとても良いことです。",
+"オープンキャンパスに行くとさらに進路が具体的になります。",
+"入試レベルを動画で確認し、情報を上手に選べています。",
+"共通テストボーダーを確認し実力を把握しているのは大変良いことです。",
+"趣味で心を休めながら進めているのは継続のコツです。"
+],
+middle: [
+"迷うときは学校を1つだけ調べると動きやすいです。",
+"気持ちを書き出すと不安が小さくなります。",
+"家族や先生に話すことで考えが整理されます。",
+"資料を一度しまって距離をおくと落ち着けます。",
+"音楽などで心を軽くしてから考えると良い答えが出やすいです."
+],
+bad: [
+"進路で苦しくなるのは自然なことです。あなたは一人ではありません。",
+"泣く・寝る・食べるなど身体を休めることを最優先してください。",
+"情報が多いと混乱するので資料を見えない場所にしまうのも有効です。",
+"信頼できる相手に「今つらい」と伝えるだけで気持ちが軽くなります。",
+"未来は1つではありません。焦らなくて大丈夫です。"
+]
+},
+
+study: {
+good: [
+"学習習慣が身についていて非常に良い状態です。",
+"わからないことを調べる姿勢がありとても良い習慣です。",
+"集中できる環境を整えているのは大変良いことです。",
+"目標点を設定できていることは成長につながります。",
+"少しずつ継続できている自分を褒めてください。"
+],
+middle: [
+"『5分だけやる』と決めると動きやすくなります。",
+"動画学習など軽い勉強から入るとやる気が戻ります。",
+"好きな教科から取り組むと勉強が続きやすくなります。",
+"勉強できた日は〇で記録して自己肯定感を高めましょう。",
+"友達との近況報告で励まし合いながら進められます。"
+],
+bad: [
+"勉強が手につかないのは怠けではなく疲れのサインです。",
+"まずは休む・寝る・食べるを優先してください。",
+"「1ページ読むだけ」で進める日もあります。",
+"わからない問題は誰かに聞くことで前に進めます。",
+"自分を責めないでください。できない日は必ずあります。"
+]
+},
+
+rel: {
+good: [
+"相手との距離感を調整しながら関係を築けているのはとても良いことです。",
+"気持ちを伝えられるのは優しさと勇気の証です。",
+"無理しすぎず自分を大切にできているのは大変良いことです。",
+"周囲の目を気にしすぎず自分らしくふるまえているのはとても良いことです。",
+"人を理解しようとする姿勢はとても良い姿勢です。"
+],
+middle: [
+"ときどき距離を置き深呼吸することで心の余裕が戻ります。",
+"挨拶から関係を作り直すと良い雰囲気が生まれます。",
+"周りの目が気になるときは「今日は60点でOK」と考えると楽になります。",
+"気持ちを書き出すと相手への感情が整理されます。",
+"全員に好かれる必要はありません。あなたのペースで大丈夫です。"
+],
+bad: [
+"しんどい気持ちを一人で抱えないでください。まずは自分の心を最優先に。",
+"苦手な人がいるのは自然なことです。",
+"必要なら距離を置いても問題ありません。逃げることは悪ではありません。",
+"信頼できる相手に気持ちを少し話すと整理が進みます。",
+"時間が解決することも多いです。今は無理をしないでください。"
+]
+}
+
+};
+
+
+function getCategoryResult(prefix){
+let counts = {good:0, middle:0, bad:0};
+for(let i=1;i<=4;i++){
+const v = document.querySelector(`input[name="${prefix}${i}"]:checked`);
+if(v) counts[v.value]++;
+}
+if(counts.good >= 3) return "good";
+if(counts.bad >= 2) return "bad";
+return "middle";
+}
+
+function check(){
+const life = getCategoryResult("life");
+const path = getCategoryResult("path");
+const study = getCategoryResult("study");
+const rel = getCategoryResult("rel");
+
+let text = "";
+
+text += "【生活の振り返り】\n";
+feedback.life[life].forEach(a=> text += "・"+a+"\n");
+
+text += "\n【進路の振り返り】\n";
+feedback.path[path].forEach(a=> text += "・"+a+"\n");
+
+text += "\n【学習の振り返り】\n";
+feedback.study[study].forEach(a=> text += "・"+a+"\n");
+
+text += "\n【人間関係の振り返り】\n";
+feedback.rel[rel].forEach(a=> text += "・"+a+"\n");
+
+document.getElementById("result").textContent = text;
+}
+</script>
+
+</body>
+</html>
